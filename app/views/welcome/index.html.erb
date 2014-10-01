@@ -4,7 +4,8 @@
     <title>DriverGuru.Co</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
      
-     <link href="css/bootstrap.min.css" rel="stylesheet" media="screen"/> <link rel="stylesheet" href="css/animate.css">
+     <link href="css/bootstrap.min.css" rel="stylesheet" media="screen"/> 
+     <link rel="stylesheet" href="css/animate.css">
      <link href="css/style.css" type ="text/css" rel="stylesheet"/>
      <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>
 
@@ -29,22 +30,27 @@
 			<div class= "col-md-3 platformText">
 			<h3>Step 1</h3>
 			<p>Click "Find a Driver" and select a driver that you would like to use for your trip based on rating, language, vehicle type, etc. </p>
-			<img class= "platformimage" src="assets/images/maleprofile.png" height="150" width="auto">
+			<!-- <img class= "platformimage platformimage1" url="/assets/maleprofile.png" height="150px" width="auto"> -->
+			<%= image_tag('maleprofile.png', :class => "platformimage") %>
+		
 		</div>
 		<div class= "col-md-3 platformText">
 			<h3> Step 2</h3>
 			<p>Once the driver is selected, you will be asked to provide additional information about your travel plans.</p>
-			<img  class= "platformimage" src="assets/images/form.png" height="150" width="auto">
+			<!-- <img  class= "platformimage" src="assets/images/form.png" height="150" width="auto"> -->
+			<%= image_tag('form.png', :class => "platformimage") %>
 		</div>
 		<div class= "col-md-3 platformText">
 			<h3> Step 3</h3>
 			<p>Once that form is submitted to us, we will work with the driver to ensure he/she is available on the day of your trip.</p>
-			<img class= "platformimage" src="assets/images/collaborate.png" height="150" width="auto">
+			<!-- <img class= "platformimage" src="assets/images/collaborate.png" height="150" width="auto"> -->
+			<%= image_tag('collaborate.png', :class => "platformimage") %>
 		</div>
 		<div class= "col-md-3 platformText">
 			<h3> Step 4</h3>
 			<p>Once driver availability is confirmed, we will email you a confirmation link to confirm the booking and finalize payment.</p>
-			<img class= "platformimage" src="assets/images/handshake.png" height="150" width="auto">
+			<!-- <img class= "platformimage" src="assets/images/handshake.png" height="150" width="auto"> -->
+			<%= image_tag('handshake.png', :class => "platformimage") %>
 		</div>
 <!-- 	</div> -->
 	</div>

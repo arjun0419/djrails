@@ -1,0 +1,22 @@
+<%= form_for @driver do |f| %>
+<div>
+	<%= f.label :firstName%>
+	<%= f.text_field :firstName %>
+</div>
+<div>
+	<%= f.label :lastName %>
+	<%= f.text_field :lastName %>
+</div>
+<div>
+	<%= f.label :city %>
+	<%= f.text_field :city %>
+</div>
+<div>
+	<%= f.label :phone %>
+	<%= f.text_field :phone %>
+</div>
+
+<%= f.submit %>
+
+<%end%>
+
