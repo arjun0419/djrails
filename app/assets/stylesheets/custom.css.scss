@@ -1,0 +1,182 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+
+/*why is the font not getting applied?*/
+
+body{
+  font-family: 'Lato', sans-serif;
+  padding-top: 50px; 
+  background-color: white;
+
+}
+
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.container-fluid{
+  padding: 0 0 0 0;
+
+}
+/*Initial page*/
+.test{ 
+  background-image: image-url('taxi.jpg'); 
+  background-repeat: no-repeat;
+  background-position: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+/*  background-size: 100% auto;*/
+height:800px;
+  /*position: relative;*/
+/*  width: 100%;*/
+ /* padding-bottom: 66.666666666667%;*/
+  height: 800px;
+  top: 0;
+  left: 0;
+  font-family: 'Lato', sans-serif;
+  z-index:-10;
+  position: relative;
+  
+}
+
+.logotext{
+  letter-spacing: 10px;
+}
+
+.nav {
+  padding-right: 10px;
+}
+
+.navbar-inverse{
+  background-color: #000000;
+}
+
+.navbar{
+  border: none;
+}
+
+.navbar-txt {
+  margin: none;
+}
+
+.herotext{
+  margin:0;
+
+/*  padding-top: 10%;
+  padding-left: 10%;*/
+
+  font-size: 6vw;
+  color: white;
+  font-weight: 700;
+  line-height:90%;
+  position: relative;
+  padding-top: 7%;
+  padding-left: 5%;
+  padding-right: 5%;
+
+/*  top: -100%;*/
+/*  z-index: 10;*/
+
+}
+
+.container{
+  padding-right: 0;
+}
+.pitch1{
+/*  padding: 10px auto 10px auto;*/
+  height: 300px;
+  float: none;
+  margin: 0 auto;
+  padding:auto;
+  background: #FDF5E6;
+/*  overflow:auto;*/
+}
+/*End of initial page*/
+
+/*platform: section2*/
+.platformSection
+{
+  margin-bottom: 50px;  
+}
+.platformHeader{
+  position: center;
+  margin: 0 auto;
+/*  padding-top: 100px;
+  padding-bottom: 100px;*/
+  letter-spacing: 8px;
+  text-align: center;
+}
+
+.platformimage{
+  margin-top: 13%;
+}
+
+h1{
+  font-weight: 700;
+  font-size: 7vw;;
+}
+
+.platformText{
+  text-align: center;
+  height: 350px;
+  padding-top: auto;
+}
+
+.row{
+  margin-right: 0;
+  margin-left: 0;
+}
+
+/*end of platform: section2*/
+
+.ImageBackgroundSection{
+  background-image: image-url('redlight.jpg');  
+  background-repeat: no-repeat;
+  background-position: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  /*position: relative;*/
+  max-width: 100%;
+  height: 500px;
+  top: 0;
+  left: 0;
+}
+.ImageBackgroundSection h2{
+  color:white;
+  padding-top: 23%;
+  line-height: 45px;
+}
+
+
+/*Questions Section*/
+
+.questionSection{
+  margin: 80px auto;
+}
+
+.questionBlock{
+  text-align: center;
+  height:5vm;
+}
+
+.answer{
+  display:none;
+}
+
+.footertext{
+padding: 0;
+text-decoration: none;
+margin: 0 auto;
+}
+
+.footertext h3 {
+/*margin-top: 20px;*/
+width: 100%;
+font-size: 3vw;
+}

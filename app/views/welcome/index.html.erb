@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DriverGuru.Co</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+     
+     <link href="css/bootstrap.min.css" rel="stylesheet" media="screen"/> <link rel="stylesheet" href="css/animate.css">
+     <link href="css/style.css" type ="text/css" rel="stylesheet"/>
+     <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>
+
+  </head>
+  <body>
+
+<!-- Landing :Section1-->
+
+	<div class="test row col-md-12 col-xs-12 col-sm-12">
+		<p class="herotext">Let us take care of your ground transportation needs at your destination. <br>
+		<a href="#" class = "navbar-btn btn-danger btn">Find a driver</a></p>
+	</div>  
+
+<!-- platform: section2 -->
+<section>
+	<div class="row platformSection">
+		<!-- <div class = "col-md-12"> -->
+			<div class="platformHeader">
+				<p><h1><strong> The DriverGuru Platform</strong></h1></p>
+				<p> <h3>How does it work?</h3></p>
+			</div>
+			<div class= "col-md-3 platformText">
+			<h3>Step 1</h3>
+			<p>Click "Find a Driver" and select a driver that you would like to use for your trip based on rating, language, vehicle type, etc. </p>
+			<img class= "platformimage" src="assets/images/maleprofile.png" height="150" width="auto">
+		</div>
+		<div class= "col-md-3 platformText">
+			<h3> Step 2</h3>
+			<p>Once the driver is selected, you will be asked to provide additional information about your travel plans.</p>
+			<img  class= "platformimage" src="assets/images/form.png" height="150" width="auto">
+		</div>
+		<div class= "col-md-3 platformText">
+			<h3> Step 3</h3>
+			<p>Once that form is submitted to us, we will work with the driver to ensure he/she is available on the day of your trip.</p>
+			<img class= "platformimage" src="assets/images/collaborate.png" height="150" width="auto">
+		</div>
+		<div class= "col-md-3 platformText">
+			<h3> Step 4</h3>
+			<p>Once driver availability is confirmed, we will email you a confirmation link to confirm the booking and finalize payment.</p>
+			<img class= "platformimage" src="assets/images/handshake.png" height="150" width="auto">
+		</div>
+<!-- 	</div> -->
+	</div>
+<section>
+	<div class = " row col-md-12 ImageBackgroundSection">
+ 		<p>
+	   		<h2>
+	   			Getting around doesn't need to be a hassle.<br> You should be enjoying your trip!
+	   		</h2>
+   		</p>
+	</div>
+</section>
+<section>
+	<div class="container">
+		<div class = "row questionSection">
+			<div class = "col-md-3 questionBlock">
+		 		<p>
+			   		<h2>
+			   			How much does this cost?
+			   		</h2>
+		   		</p>
+		   	</div>
+		   	<div class="answer">
+		   			<p>
+		   				<h2>
+		   					It's free homey!
+		   				</h2>
+		   			</p>
+		   		</div>
+
+
+			<div class = "col-md-3 questionBlock">
+		 		<p>
+			   		<h2>
+			   			How do you find these drivers?
+			   		</h2>
+		   		</p>
+			</div>
+
+
+			<div class = "col-md-3 questionBlock">
+		 		<p>
+			   		<h2>
+			   			How secure is the payment gateway?
+			   		</h2>
+		   		</p>
+			</div>
+
+
+			<div class = "col-md-3 questionBlock">
+		 		<p>
+			   		<h2>
+			   			What if I cancel my trip?
+			   		</h2>
+		   		</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- end of platform section -->
+
+
+<!-- Footer -->
+
+<!-- <div class = "row navbar navbar-inverse"> -->
+<!-- 	<div class = "row"> -->
+		<div class = "row  col-md-9 footertext">
+			<h3> Go ahead. Check out our list of experienced drivers</h3>
+		</div>
+
+		<div class = "col-md-3 ">
+			<a href="#" class = "navbar-btn btn-danger btn ">Find a driver</a>
+
+		</div>
+<!-- 		</div>
+		<div class ="col-md-4 footerbutton"> -->
+			<!-- <a href="#" class = "navbar-btn btn-danger btn pull-right "> -->
+
+<!-- </div> -->
+</div>
+<!-- Load JQuery & bootstrap.js -->
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+
+   	// $(".questionBlock").on('hover', function(){
+   	// 	$('.ImageBackgroundSection').addClass('.bounceInLeft');
+   	// });
+
+   	$(".questionBlock").mouseover	(function(){
+ 	// $(".questionBlock").css("background-color","yellow");
+ 	$(".answer").show(500);
+ 	$(".questionBlock").hide();
+	});
+
+
+    </script>
+
+  </body>
+</html>
