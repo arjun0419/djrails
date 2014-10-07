@@ -34,6 +34,9 @@ gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) support
 gem 'pry'
 gem 'pry-rails'
 gem 'simple_form'
+gem 'mail_form'
+gem 'better_errors', group: :development
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

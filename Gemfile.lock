@@ -30,6 +30,10 @@ GEM
     arel (5.0.1.20140414130214)
     autoprefixer-rails (3.1.0.20140911)
       execjs
+    better_errors (2.0.0)
+      coderay (>= 1.0.0)
+      erubis (>= 2.6.6)
+      rack (>= 0.9.0)
     bootstrap-sass (3.2.0.2)
       sass (~> 3.2)
     builder (3.2.2)
@@ -62,6 +66,9 @@ GEM
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    mail_form (1.5.0)
+      actionmailer (>= 3.2, < 5)
+      activemodel (>= 3.2, < 5)
     method_source (0.8.2)
     mime-types (1.25.1)
     minitest (5.4.1)
@@ -141,11 +148,13 @@ PLATFORMS
 
 DEPENDENCIES
   autoprefixer-rails
+  better_errors
   bootstrap-sass (~> 3.2.0)
   coffee-rails (~> 4.0.0)
   jbuilder (~> 2.0)
   jquery-rails
   less-rails
+  mail_form
   pry
   pry-rails
   rails (= 4.1.4)
