@@ -1,12 +1,12 @@
-<h1 align="center">Driver </h1>
+<h1 align="center">Drivers </h1>
 
-<p><%= link_to 'Add New Driver', new_driver_path %></p>
+<p align="center"><%= link_to 'Add New Driver', new_driver_path %></p>
 
 <table width="100%" border="1" >
-  <tr >
+  <tr align="center" >
     <th >First Name</th>
     <th>Last Name</th>
-    <th>Languages Spoken</th>
+    <th>City</th>
     <th>Phone</th>
   </tr>
  
@@ -16,7 +16,11 @@
       <td><%= driver.lastName %></td>
        <td><%= driver.city%></td>
         <td><%= driver.phone %></td>
-      <td><%= link_to "edit", [:edit, painting]%></td>
+        <% driver.languages.each do |language| %>
+          <td><%= language.name%></td>
+          <%end%>
+
+      <td><%= link_to "edit", [:edit, driver] %></td>
     </tr>
   <% end %>
 </table>

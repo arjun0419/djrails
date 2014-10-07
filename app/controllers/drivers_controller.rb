@@ -10,12 +10,15 @@ class DriversController < ApplicationController
 
 	def new
 		@driver = Driver.new
+		@languages = Language.all
+
 	end
 
 	def create
-		@drivers = Driver.new(driver_params)
+		@driver = Driver.new(driver_params)
+		@languages = Language.all
 
-		if @drivers.save
+		if @driver.save
 			redirect_to @driver, notice: "Driver info was saved!"
 		else 
 			render 'new'
@@ -34,6 +37,8 @@ class DriversController < ApplicationController
 
 	def edit
 		@driver = Driver.find(params[:id])
+		@language = Language.find(params[:id])
+		@languages = Language.all
 	end
 
 	private

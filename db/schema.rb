@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141001021235) do
+ActiveRecord::Schema.define(version: 20141001035705) do
 
   create_table "drivers", force: true do |t|
     t.string   "firstName"
@@ -21,6 +21,20 @@ ActiveRecord::Schema.define(version: 20141001021235) do
     t.string   "phone"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "drivers_languages", id: false, force: true do |t|
+    t.integer "driver_id",   null: false
+    t.integer "language_id", null: false
+  end
+
+  add_index "drivers_languages", ["driver_id", "language_id"], name: "index_drivers_languages_on_driver_id_and_language_id"
+  add_index "drivers_languages", ["language_id", "driver_id"], name: "index_drivers_languages_on_language_id_and_driver_id"
+
+  create_table "languages", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "name"
   end
 
 end
