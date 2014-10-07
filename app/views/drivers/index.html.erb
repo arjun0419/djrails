@@ -1,26 +1,515 @@
-<h1 align="center">Drivers </h1>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DriverGuru.Co</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+     
+     <link href="css/bootstrap.min.css" rel="stylesheet" media="screen"/> 
+     <link rel="stylesheet" href="css/animate.min.css">
+     <link href="css/style.css" type ="text/css" rel="stylesheet"/>
+     <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>
 
-<p align="center"><%= link_to 'Add New Driver', new_driver_path %></p>
+  </head>
+  <body>
+<div class="container-fluid">
+<!-- top Nav bar -->
+ 	<div class = "navbar navbar-inverse navbar-fixed-top topnavbar">
+		<div class = "navbar.header ">
+				<a href = "index.html" class = "navbar-brand logotext">DriverJi</a>
+				<button class = "navbar-toggle" data-toggle = "collapse" data-target = ".navHeaderCollapse"> 
+					<span class = "icon-bar"></span>
+					<span class = "icon-bar"></span>
+					<span class = "icon-bar"></span>
+				</button>
+				<div class = "collapse navbar-collapse navHeaderCollapse">
+					<ul class = "nav navbar-nav navbar-right navbar-header">
+						<li ><a href = "index.html">Home</a></li>
+						<!-- <li class = "dropdown">
+							<a href = "#" class = "dropdown-toggle" data-toggle = "dropdown"> Learn More <b class = "caret"></b></a>
+							<ul class = "dropdown-menu">
+								<li><a href = "#platformSection">Our Platform</a></li>
+								<li><a href = "#questionSection">Questions?</a></li>
+							</ul>
+						<li><a href = "#">Contact Us</a></li> -->
 
-<table width="100%" border="1" >
-  <tr align="center" >
-    <th >First Name</th>
-    <th>Last Name</th>
-    <th>City</th>
-    <th>Phone</th>
-  </tr>
- 
-  <% @drivers.each do |driver| %>
-    <tr align="center">
-      <td><%= driver.firstName %></td>
-      <td><%= driver.lastName %></td>
-       <td><%= driver.city%></td>
-        <td><%= driver.phone %></td>
-        <% driver.languages.each do |language| %>
-          <td><%= language.name%></td>
-          <%end%>
+						<!-- <li><a href = "#" >Find a Driver!</a></li> -->
+					</ul>	
+				</div>
+		</div>
+	</div>
+</div>
+<div class="row col-md-12 expressbook">
+	<p>"You know what, I trust DriverJi. Please arrange one of these guys for me."   
+		<a href="#" class = "navbar-btn btn-danger btn ">DriverJi ExpressBook</a>
+	</p>
+</div>
+<div class="row listing">
+	<!-- Begining Jaleesh's profile -->
+	<div class = "col-md-3 driverprofile jaleeshprofile">
+		<img class= "driverimage" src="assets/images/matt_circle.png" height="150" width="auto">
+		<div class ="driverinfo">
+			<h2> Jaleesh </h2>
+			<!-- <li><img class= "jaleeshstar review" src="assets/images/4_Star.png" height="20" width="auto" margin="0"></li> -->
+			<li><%= image_tag('matt_circle.png', :class => "jaleeshstar review") %></li>
+			<br>
+			<!-- Button trigger modal -->
+		<li><button class="btn btn-primary" data-toggle="modal" data-target="#myModal">See reviews! </button></li>
+			<p>
+				<ul>
+					<li> Age: 24</li>
+					<li> Experience: 6 years </li>
+					<li> Car Type: Mini-Van</li>
+					<li> Car Model: 2010 Toyota Innova</li>
+					<li> Car Accomodates: 7 adults</li>
 
-      <td><%= link_to "edit", [:edit, driver] %></td>
-    </tr>
-  <% end %>
-</table>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">Jaleesh's Reviews:</h4>
+      </div>
+      <div class="modal-body">
+        
+		<p>
+			"Jaleesh is awesome! Funny as hell. Wouldn't have been nearly as fun without ths guy" - <i> Jane Doe, USA </i>
+		</p>
+
+		<p>
+			"This guy is unreal. Funny as hell. Wouldn't have been nearly as fun without ths guy" - <i> Jane Doe, USA </i>
+		</p>
+
+		<p>
+			"This guy is unreal. Funny as hell. Wouldn't have been nearly as fun without ths guy" - <i> Jane Doe, USA </i>
+		</p>
+
+		<p>
+			"This guy is unreal. Funny as hell. Wouldn't have been nearly as fun without ths guy" - <i> Jane Doe, USA </i>
+		</p>
+	
+      </div>
+
+    </div>
+  </div>
+</div>
+
+			</ul>
+					
+					<a href="#" class = "navbar-btn btn-danger btn ">Book Jaleesh</a>
+		</div>
+
+		
+	</div>
+<!-- End of Jaleesh's profile and reviews -->
+
+
+<div class = "col-md-3 driverprofile jaleeshprofile">
+		<img class= "driverimage" src="assets/images/matt_circle.png" height="150" width="auto">
+		<div class ="driverinfo">
+			<h2> Jaleesh </h2>
+			<!-- <li><img class= "jaleeshstar review" src="assets/images/4_Star.png" height="20" width="auto" margin="0"></li> -->
+			<li><%= image_tag('matt_circle.png', :class => "jaleeshstar review") %></li>
+			<br>
+			<!-- Button trigger modal -->
+		<li><button class="btn btn-primary" data-toggle="modal" data-target="#myModal">See reviews! </button></li>
+			<p>
+				<ul>
+					<li> Age: 24</li>
+					<li> Experience: 6 years </li>
+					<li> Car Type: Mini-Van</li>
+					<li> Car Model: 2010 Toyota Innova</li>
+					<li> Car Accomodates: 7 adults</li>
+
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">Jaleesh's Reviews:</h4>
+      </div>
+      <div class="modal-body">
+        
+		<p>
+			"Jaleesh is awesome! Funny as hell. Wouldn't have been nearly as fun without ths guy" - <i> Jane Doe, USA </i>
+		</p>
+
+		<p>
+			"This guy is unreal. Funny as hell. Wouldn't have been nearly as fun without ths guy" - <i> Jane Doe, USA </i>
+		</p>
+
+		<p>
+			"This guy is unreal. Funny as hell. Wouldn't have been nearly as fun without ths guy" - <i> Jane Doe, USA </i>
+		</p>
+
+		<p>
+			"This guy is unreal. Funny as hell. Wouldn't have been nearly as fun without ths guy" - <i> Jane Doe, USA </i>
+		</p>
+	
+      </div>
+
+    </div>
+  </div>
+</div>
+
+			</ul>
+					
+					<a href="#" class = "navbar-btn btn-danger btn ">Book Jaleesh</a>
+		</div>
+
+		
+	</div>
+<!-- End of Jaleesh's profile and reviews -->
+
+<div class = "col-md-3 driverprofile jaleeshprofile">
+		<img class= "driverimage" src="assets/images/matt_circle.png" height="150" width="auto">
+		<div class ="driverinfo">
+			<h2> Jaleesh </h2>
+<!-- 			<li><img class= "jaleeshstar review" src="assets/images/4_Star.png" height="20" width="auto" margin="0"></li> -->
+			<li><%= image_tag('matt_circle.png', :class => "jaleeshstar review") %></li>
+			<br>
+			<!-- Button trigger modal -->
+		<li><button class="btn btn-primary" data-toggle="modal" data-target="#myModal">See reviews! </button></li>
+			<p>
+				<ul>
+					<li> Age: 24</li>
+					<li> Experience: 6 years </li>
+					<li> Car Type: Mini-Van</li>
+					<li> Car Model: 2010 Toyota Innova</li>
+					<li> Car Accomodates: 7 adults</li>
+
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">Jaleesh's Reviews:</h4>
+      </div>
+      <div class="modal-body">
+        
+		<p>
+			"Jaleesh is awesome! Funny as hell. Wouldn't have been nearly as fun without ths guy" - <i> Jane Doe, USA </i>
+		</p>
+
+		<p>
+			"This guy is unreal. Funny as hell. Wouldn't have been nearly as fun without ths guy" - <i> Jane Doe, USA </i>
+		</p>
+
+		<p>
+			"This guy is unreal. Funny as hell. Wouldn't have been nearly as fun without ths guy" - <i> Jane Doe, USA </i>
+		</p>
+
+		<p>
+			"This guy is unreal. Funny as hell. Wouldn't have been nearly as fun without ths guy" - <i> Jane Doe, USA </i>
+		</p>
+	
+      </div>
+
+    </div>
+  </div>
+</div>
+
+			</ul>
+					
+					<a href="#" class = "navbar-btn btn-danger btn ">Book Jaleesh</a>
+		</div>
+
+		
+	</div>
+<!-- End of Jaleesh's profile and reviews -->
+
+<div class = "col-md-3 driverprofile jaleeshprofile">
+		<img class= "driverimage" src="matt_circle.png" height="150" width="auto">
+		<div class ="driverinfo">
+			<h2> Jaleesh </h2>
+			<!-- <li><img class= "jaleeshstar review" src="assets/images/4_Star.png" height="20" width="auto" margin="0"></li> -->
+			<li><%= image_tag('matt_circle.png', :class => "jaleeshstar review") %></li>
+			<br>
+			<!-- Button trigger modal -->
+		<li><button class="btn btn-primary" data-toggle="modal" data-target="#myModal">See reviews! </button></li>
+			<p>
+				<ul>
+					<li> Age: 24</li>
+					<li> Experience: 6 years </li>
+					<li> Car Type: Mini-Van</li>
+					<li> Car Model: 2010 Toyota Innova</li>
+					<li> Car Accomodates: 7 adults</li>
+
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">Jaleesh's Reviews:</h4>
+      </div>
+      <div class="modal-body">
+        
+		<p>
+			"Jaleesh is awesome! Funny as hell. Wouldn't have been nearly as fun without ths guy" - <i> Jane Doe, USA </i>
+		</p>
+
+		<p>
+			"This guy is unreal. Funny as hell. Wouldn't have been nearly as fun without ths guy" - <i> Jane Doe, USA </i>
+		</p>
+
+		<p>
+			"This guy is unreal. Funny as hell. Wouldn't have been nearly as fun without ths guy" - <i> Jane Doe, USA </i>
+		</p>
+
+		<p>
+			"This guy is unreal. Funny as hell. Wouldn't have been nearly as fun without ths guy" - <i> Jane Doe, USA </i>
+		</p>
+	
+      </div>
+
+    </div>
+  </div>
+</div>
+
+			</ul>
+					
+					<a href="#" class = "navbar-btn btn-danger btn ">Book Jaleesh</a>
+		</div>
+
+		
+	</div>
+<!-- End of Jaleesh's profile and reviews -->
+<div class = "col-md-3 driverprofile jaleeshprofile">
+<!-- 		<img class= "driverimage" src="assets/images/matt_circle.png" height="150" width="auto"> -->
+		<li><%= image_tag('matt_circle.png', :class => "jaleeshstar review") %></li>
+		<div class ="driverinfo">
+			<h2> Jaleesh </h2>
+			<li><img class= "jaleeshstar review" src="assets/images/4_Star.png" height="20" width="auto" margin="0"></li>
+			<br>
+			<!-- Button trigger modal -->
+		<li><button class="btn btn-primary" data-toggle="modal" data-target="#myModal">See reviews! </button></li>
+			<p>
+				<ul>
+					<li> Age: 24</li>
+					<li> Experience: 6 years </li>
+					<li> Car Type: Mini-Van</li>
+					<li> Car Model: 2010 Toyota Innova</li>
+					<li> Car Accomodates: 7 adults</li>
+
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">Jaleesh's Reviews:</h4>
+      </div>
+      <div class="modal-body">
+        
+		<p>
+			"Jaleesh is awesome! Funny as hell. Wouldn't have been nearly as fun without ths guy" - <i> Jane Doe, USA </i>
+		</p>
+
+		<p>
+			"This guy is unreal. Funny as hell. Wouldn't have been nearly as fun without ths guy" - <i> Jane Doe, USA </i>
+		</p>
+
+		<p>
+			"This guy is unreal. Funny as hell. Wouldn't have been nearly as fun without ths guy" - <i> Jane Doe, USA </i>
+		</p>
+
+		<p>
+			"This guy is unreal. Funny as hell. Wouldn't have been nearly as fun without ths guy" - <i> Jane Doe, USA </i>
+		</p>
+	
+      </div>
+
+    </div>
+  </div>
+</div>
+
+			</ul>
+					
+					<a href="#" class = "navbar-btn btn-danger btn ">Book Jaleesh</a>
+		</div>
+
+		
+	</div>
+<!-- End of Jaleesh's profile and reviews -->
+<div class = "col-md-3 driverprofile jaleeshprofile">
+		<!-- <img class= "driverimage" src="assets/images/matt_circle.png" height="150" width="auto"> -->
+		<%= image_tag('matt_circle.png', :class => "jaleeshstar review") %>
+		<div class ="driverinfo">
+			<h2> Jaleesh </h2>
+			<!-- <li><img class= "jaleeshstar review" src="assets/images/4_Star.png" height="20" width="auto" margin="0"></li> -->
+			<li><%= image_tag('4_Star.png', :class => "jaleeshstar review") %></li>
+			<br>
+			<!-- Button trigger modal -->
+		<li><button class="btn btn-primary" data-toggle="modal" data-target="#myModal">See reviews! </button></li>
+			<p>
+				<ul>
+					<li> Age: 24</li>
+					<li> Experience: 6 years </li>
+					<li> Car Type: Mini-Van</li>
+					<li> Car Model: 2010 Toyota Innova</li>
+					<li> Car Accomodates: 7 adults</li>
+
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">Jaleesh's Reviews:</h4>
+      </div>
+      <div class="modal-body">
+        
+		<p>
+			"Jaleesh is awesome! Funny as hell. Wouldn't have been nearly as fun without ths guy" - <i> Jane Doe, USA </i>
+		</p>
+
+		<p>
+			"This guy is unreal. Funny as hell. Wouldn't have been nearly as fun without ths guy" - <i> Jane Doe, USA </i>
+		</p>
+
+		<p>
+			"This guy is unreal. Funny as hell. Wouldn't have been nearly as fun without ths guy" - <i> Jane Doe, USA </i>
+		</p>
+
+		<p>
+			"This guy is unreal. Funny as hell. Wouldn't have been nearly as fun without ths guy" - <i> Jane Doe, USA </i>
+		</p>
+	
+      </div>
+
+    </div>
+  </div>
+</div>
+
+			</ul>
+					
+					<a href="#" class = "navbar-btn btn-danger btn ">Book Jaleesh</a>
+		</div>
+
+		
+	</div>
+<!-- End of Jaleesh's profile and reviews -->
+<div class = "col-md-3 driverprofile jaleeshprofile">
+		<img class= "driverimage" src="matt_circle.png" height="150" width="auto">
+		<div class ="driverinfo">
+			<h2> Jaleesh </h2>
+			<li><img class= "jaleeshstar review" src="assets/images/4_Star.png" height="20" width="auto" margin="0"></li>
+			<br>
+			<!-- Button trigger modal -->
+		<li><button class="btn btn-primary" data-toggle="modal" data-target="#myModal">See reviews! </button></li>
+			<p>
+				<ul>
+					<li> Age: 24</li>
+					<li> Experience: 6 years </li>
+					<li> Car Type: Mini-Van</li>
+					<li> Car Model: 2010 Toyota Innova</li>
+					<li> Car Accomodates: 7 adults</li>
+
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">Jaleesh's Reviews:</h4>
+      </div>
+      <div class="modal-body">
+        
+		<p>
+			"Jaleesh is awesome! Funny as hell. Wouldn't have been nearly as fun without ths guy" - <i> Jane Doe, USA </i>
+		</p>
+
+		<p>
+			"This guy is unreal. Funny as hell. Wouldn't have been nearly as fun without ths guy" - <i> Jane Doe, USA </i>
+		</p>
+
+		<p>
+			"This guy is unreal. Funny as hell. Wouldn't have been nearly as fun without ths guy" - <i> Jane Doe, USA </i>
+		</p>
+
+		<p>
+			"This guy is unreal. Funny as hell. Wouldn't have been nearly as fun without ths guy" - <i> Jane Doe, USA </i>
+		</p>
+	
+      </div>
+
+    </div>
+  </div>
+</div>
+
+			</ul>
+					
+					<a href="#" class = "navbar-btn btn-danger btn ">Book Jaleesh</a>
+		</div>
+
+		
+	</div>
+<!-- End of Jaleesh's profile and reviews -->
+</div>
+<div class="row col-md-12 expressbook">
+	<p>"You know what, I trust DriverJi. Please arrange one of these guys for me."   
+		<a href="#" class = "navbar-btn btn-danger btn ">DriverJi ExpressBook</a>
+	</p>
+</div>
+
+
+<!-- Load JQuery & bootstrap.js -->
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+   <script>
+
+   	// $(".questionBlock").on('hover', function(){
+   	// 	$('.ImageBackgroundSection').addClass('.bounceInLeft');
+   	// });
+	$(".herotext").addClass('animated bounceInRight');
+	$(".ImageBackgroundSection").addClass('animated bounceInRight');
+	// When question 1 is clicked, hide everything else and just show the response
+
+   	$(".jaleeshprofile").mouseover(function(){
+ 		$(".jaleeshreviews").show();
+	}); 	
+	$(".jaleeshprofile").mouseleave(function(){
+ 		$(".jaleeshreviews").hide();
+	});
+
+	$(".ajithprofile").mouseover(function(){
+ 		$(".ajithreviews").show();
+	}); 	
+	$(".ajithprofile").mouseleave(function(){
+ 		$(".ajithreviews").hide();
+	});
+
+	$(".arunprofile").mouseover(function(){
+ 		$(".arunreviews").show();
+	}); 	
+	$(".arunprofile").mouseleave(function(){
+ 		$(".arunreviews").hide();
+	});
+	$(".ajayprofile").mouseover(function(){
+ 		$(".ajayreviews").show();
+	}); 	
+	$(".ajayprofile").mouseleave(function(){
+ 		$(".ajayreviews").hide();
+	});
+	$(".johnprofile").mouseover(function(){
+ 		$(".johnreviews").show();
+	}); 	
+	$(".johnprofile").mouseleave(function(){
+ 		$(".johnreviews").hide();
+	});
+
+
+    </script>
+
+  </body>
+</html>

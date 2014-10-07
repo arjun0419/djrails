@@ -4,6 +4,8 @@ root 'welcome#index'
 
 resources :drivers, only: [:index, :new, :create, :show, :edit, :update]  
 
+resources :booking_requests, only: [:new, :create]
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

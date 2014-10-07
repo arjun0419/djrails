@@ -1,56 +1,90 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>DriverGuru.Co</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-     
-     <link href="css/bootstrap.min.css" rel="stylesheet" media="screen"/> 
-     <link rel="stylesheet" href="css/animate.css">
-     <link href="css/style.css" type ="text/css" rel="stylesheet"/>
-     <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>
-
-  </head>
   <body>
+  	<a name="home"></a> 
+<div class="container-fluid">
+<!-- top Nav bar -->
+ 	<div class = "navbar navbar-inverse navbar-fixed-top topnavbar">
+		<div class = "navbar.header ">
+				<a href = "#home" class = "navbar-brand logotext">DriverJi</a>
+				<button class = "navbar-toggle" data-toggle = "collapse" data-target = ".navHeaderCollapse"> 
+					<span class = "icon-bar"></span>
+					<span class = "icon-bar"></span>
+					<span class = "icon-bar"></span>
+				</button>
+				<div class = "collapse navbar-collapse navHeaderCollapse">
+					<ul class = "nav navbar-nav navbar-right navbar-header">
+						<li ><a href = "#">Home</a></li>
+						<!-- <li class = "dropdown">
+							<a href = "#" class = "dropdown-toggle" data-toggle = "dropdown"> Learn More <b class = "caret"></b></a>
+							<ul class = "dropdown-menu"> -->
+								<li><a href = "#platformSection">Our Platform</a></li>
+								<li><a href = "#questionSection">Questions?</a></li>
+							<!-- </ul> -->
+						<li><a href = "#">Contact Us</a></li>
+
+						<!-- <li><a href = "#" >Find a Driver!</a></li> -->
+					</ul>	
+				</div>
+		</div>
+	</div>
+</div>
+<!-- <div class="player"> -->
+  <!--   <iframe src="http://www.youtube.com/embed/arFLwdLKVj8?playlist=arFLwdLKVj8&amp;autoplay=1&amp;controls=0&amp;loop=1&amp;rel=0&amp;showinfo=0&amp;autohide=1&amp;wmode=transparent&amp;hd=1" style="width: 1425px; height: 802px; margin-top: 50px; margin-left: 0px;"></iframe> -->
+<!-- <iframe id="bluetube-player-1" frameborder="0" allowfullscreen="1" title="YouTube video player" width="1425" height="802" src="https://www.youtube.com/embed/wTcNtgA6gHs?showinfo=0&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;modestbranding=0&amp;wmode=transparent&amp;enablejsapi=1&amp;origin=https%3A%2F%2Fgopro.com" style="width: 1425px; height: 802px; left: 0px; top: -134px; position: relative;"></iframe> -->
+
+<!-- <iframe id="bluetube-player-1" frameborder="0" allowfullscreen="1" title="Vimeovideo player" width="1425" height="802" src="http://player.vimeo.com/video/26543155" width="100%" height="100%"frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen autoplay="1"></iframe> <p><a href="http://vimeo.com/26543155">India, Six Weeks In Six Minutes: Frank and Jen Travel India Trailer</a> from <a href="http://vimeo.com/globevantage">Globe Vantage</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+
+</div> -->
+
 
 <!-- Landing :Section1-->
-
-	<div class="test row col-md-12 col-xs-12 col-sm-12">
-		<p class="herotext">Let us take care of your ground transportation needs at your destination. <br>
-		<a href="#" class = "navbar-btn btn-danger btn">Find a driver</a></p>
+<div class ="row">
+	<div class="col-md-12 col-xs-12 col-sm-12 test">
+        <div class="herotext">
+		<p> 
+			Don't book a car, book a <!-- <u><i>your</i></u>  -->driver! </p>
+           <p> <%= link_to 'Select a driver', drivers_path, :class => "btn btn-danger heroBtn" %>
+           </p>
+	   
+		
+		<p class ="ji">Ji (Hindi: जी, Urdu: جی‎) is a word used as a suffix in Hindustani and many other languages of the Indian subcontinent conveying respect when used in addressing or referring to a person.</h4>
+		</p>
 	</div>  
-
+   <!-- </div> -->
+</div>
+<a name="platformSection"></a> 
 <!-- platform: section2 -->
 <section>
+<!-- 	<a name="platformSection"></a>  -->
 	<div class="row platformSection">
 		<!-- <div class = "col-md-12"> -->
 			<div class="platformHeader">
-				<p><h1><strong> The DriverGuru Platform</strong></h1></p>
+				<p><h1><strong> The DriverJi Platform</strong></h1></p>
 				<p> <h3>How does it work?</h3></p>
 			</div>
 			<div class= "col-md-3 platformText">
 			<h3>Step 1</h3>
 			<p>Click "Find a Driver" and select a driver that you would like to use for your trip based on rating, language, vehicle type, etc. </p>
-			<!-- <img class= "platformimage platformimage1" url="/assets/maleprofile.png" height="150px" width="auto"> -->
-			<%= image_tag('maleprofile.png', :class => "platformimage") %>
-		
+			<!-- <img class= "platformimage" src="assets/images/maleprofileblue.png" height="150" width="auto"> -->
+            <%= image_tag('maleprofileblue.png', :class => "platformimage") %>
 		</div>
 		<div class= "col-md-3 platformText">
 			<h3> Step 2</h3>
 			<p>Once the driver is selected, you will be asked to provide additional information about your travel plans.</p>
 			<!-- <img  class= "platformimage" src="assets/images/form.png" height="150" width="auto"> -->
-			<%= image_tag('form.png', :class => "platformimage") %>
+            <%= image_tag('form.png', :class => "platformimage") %>
 		</div>
 		<div class= "col-md-3 platformText">
 			<h3> Step 3</h3>
 			<p>Once that form is submitted to us, we will work with the driver to ensure he/she is available on the day of your trip.</p>
-			<!-- <img class= "platformimage" src="assets/images/collaborate.png" height="150" width="auto"> -->
-			<%= image_tag('collaborate.png', :class => "platformimage") %>
+			<!-- <img class= "platformimage" src="assets/images/collaborateblue.png" height="150" width="auto"> -->
+            <%= image_tag('collaborateblue.png', :class => "platformimage") %>
 		</div>
 		<div class= "col-md-3 platformText">
 			<h3> Step 4</h3>
 			<p>Once driver availability is confirmed, we will email you a confirmation link to confirm the booking and finalize payment.</p>
-			<!-- <img class= "platformimage" src="assets/images/handshake.png" height="150" width="auto"> -->
-			<%= image_tag('handshake.png', :class => "platformimage") %>
+		<!-- 	<img class= "platformimage" src="assets/images/handshake.png" height="150" width="auto"> -->
+            <%= image_tag('handshake.png', :class => "platformimage") %>
 		</div>
 <!-- 	</div> -->
 	</div>
@@ -64,49 +98,71 @@
 	</div>
 </section>
 <section>
+	<a name="questionSection"></a>
 	<div class="container">
-		<div class = "row questionSection">
-			<div class = "col-md-3 questionBlock">
+		<div class = "questionSection col-md-12">
+			<div class = "row">
 		 		<p>
-			   		<h2>
+			   		<h1 class = "questionBlock question1">
 			   			How much does this cost?
-			   		</h2>
+			   		</h1>
 		   		</p>
 		   	</div>
-		   	<div class="answer">
+		   	<div class="row answer answer1">
 		   			<p>
-		   				<h2>
-		   					It's free homey!
-		   				</h2>
+		   				<h4>
+		   					<b>We charge what's in your wallet. </b> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+		   				</h4>
 		   			</p>
 		   		</div>
 
-
-			<div class = "col-md-3 questionBlock">
+			<div class = "row">
 		 		<p>
-			   		<h2>
+			   		<h1 class = "questionBlock question2">
 			   			How do you find these drivers?
-			   		</h2>
+			   		</h1>
 		   		</p>
 			</div>
+		   	<div class="answer answer2">
+		   			<p>
+		   				<h4>
+		   					<b>Craigslist and America's Most wanted. </b>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+		   				</h4>
+		   			</p>
+		   		</div>
 
-
-			<div class = "col-md-3 questionBlock">
+			<div class = "row">
+			<div class ="question3parent"
 		 		<p>
-			   		<h2>
+			   		<h1 class = "questionBlock question3">
 			   			How secure is the payment gateway?
-			   		</h2>
+			   		</h1>
 		   		</p>
-			</div>
+			
 
-
-			<div class = "col-md-3 questionBlock">
+		   	<div class="answer answer3">
+		   			<p>
+		   				<h4>
+		   					<b>We know a guy who knows a guy who knows someone in Cayman Islands. Trust us, it's legit! </b>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+		   				</h4>
+		   			</p>
+		   	</div>
+		   	</div>
+		   </div>
+			<div class = "row">
 		 		<p>
-			   		<h2>
+			   		<h1 class = "questionBlock question4">
 			   			What if I cancel my trip?
-			   		</h2>
+			   		</h1>
 		   		</p>
 			</div>
+			<div class="answer answer4">
+		   			<p>
+		   				<h4>
+		   					<b>All good. We understand plans change. Hope you are just as understanding if our driver doesnt show up next time. jk. #YOLO.</b>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+		   				</h4>
+		   			</p>
+		   	</div>
 		</div>
 	</div>
 </section>
@@ -116,22 +172,13 @@
 
 <!-- Footer -->
 
-<!-- <div class = "row navbar navbar-inverse"> -->
-<!-- 	<div class = "row"> -->
-		<div class = "row  col-md-9 footertext">
-			<h3> Go ahead. Check out our list of experienced drivers</h3>
-		</div>
-
-		<div class = "col-md-3 ">
-			<a href="#" class = "navbar-btn btn-danger btn ">Find a driver</a>
-
-		</div>
-<!-- 		</div>
-		<div class ="col-md-4 footerbutton"> -->
-			<!-- <a href="#" class = "navbar-btn btn-danger btn pull-right "> -->
-
-<!-- </div> -->
+<div class="row col-md-12 expressbook">
+	<p>Go ahead. Check out our list of experienced drivers 
+		<a href="listing.html" class = "btn-danger btn ">Select a Driver</a>
+	</p>
 </div>
+
+
 <!-- Load JQuery & bootstrap.js -->
     <script src="http://code.jquery.com/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
@@ -140,11 +187,34 @@
    	// $(".questionBlock").on('hover', function(){
    	// 	$('.ImageBackgroundSection').addClass('.bounceInLeft');
    	// });
+	$(".herotext").addClass('animated bounceInRight');
+	$(".ImageBackgroundSection").addClass('animated bounceInRight');
+	// When question 1 is clicked, hide everything else and just show the response
 
-   	$(".questionBlock").mouseover	(function(){
- 	// $(".questionBlock").css("background-color","yellow");
- 	$(".answer").show(500);
- 	$(".questionBlock").hide();
+	// $(".question1").mouseover(function(){
+ // 		$(".answer1").show();
+	// }); 	
+	// $("question1").mouseleave(function(){
+ // 		$(".answer1").hide();
+	// });
+   	$(".question1").click(function(){
+ 		$(".answer1").show();
+ 		// $(".questionBlock").hide();
+	});
+	// When question 2 is clicked, hide everything else and just show the response
+	$(".question2").click(function(){
+ 		$(".answer2").show();
+ 		// $(".questionBlock").hide();
+	});
+	// When question 3 is clicked, hide everything else and just show the response
+	$(".question3").click(function(){
+ 		$(".answer3").show();
+ 		// $(".questionBlock").hide();
+	});
+		// When question 4 is clicked, hide everything else and just show the response
+	$(".question4").click(function(){
+ 		$(".answer4").show();
+ 		// $(".questionBlock").hide();
 	});
 
 

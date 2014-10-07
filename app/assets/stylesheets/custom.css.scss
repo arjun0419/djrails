@@ -3,6 +3,8 @@
 
 /*why is the font not getting applied?*/
 
+
+/*why is the font not getting applied?*/
 body{
   font-family: 'Lato', sans-serif;
   padding-top: 50px; 
@@ -16,34 +18,69 @@ body{
     box-sizing: border-box;
 }
 
+.player{
+position: absolute;
+display: block;
+width: 100%;
+height: 100%;
+top: 0;
+left: 0;
+overflow: hidden;
+/*-webkit-filter:grayscale(100%);
+filter:grayscale(100%);*/
+}
+
 .container-fluid{
   padding: 0 0 0 0;
-
 }
 /*Initial page*/
-.test{ 
-  background-image: image-url('taxi.jpg'); 
-  background-repeat: no-repeat;
-  background-position: fixed;
-  -webkit-background-size: cover;
+
+
+.navHeaderCollapse{
+  border:none;
+ /* clear:left;*/
+}
+
+.navbar-toggle{
+  border: none;
+}
+
+.test{
+  background-image: url(taxiblur2.jpg); 
+/*  position: fixed;*/
+  /*background-repeat: no-repeat;
+*/  -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  o-background-size: 100% auto;
-/* height:800px;*/
+  background-size: 100% auto;
+  height:55vw;
   /*position: relative;*/
 /*  width: 100%;*/
  /* padding-bottom: 66.666666666667%;*/
-  height: 800px;
+/*  height: 100%;*/
   top: 0;
   left: 0;
   font-family: 'Lato', sans-serif;
-  z-index:-10;
-/*  position: relative;*/
+ /* display: block;*/
+}
+
+
+.ji{
+  color: white;
+  position: absolute; 
+  font-size: 2vw;
+  line-height: 1em;
   
 }
 
+.heroBtn{
+  position:relative;
+  top: 50%;
+
+}
 .logotext{
   letter-spacing: 10px;
+  float:left;
 }
 
 .nav {
@@ -51,7 +88,7 @@ body{
 }
 
 .navbar-inverse{
-  background-color: #000000;
+  background-color: #00BFFF;
 }
 
 .navbar{
@@ -61,25 +98,21 @@ body{
 .navbar-txt {
   margin: none;
 }
-
 .herotext{
   margin:0;
-
 /*  padding-top: 10%;
   padding-left: 10%;*/
-
-  font-size: 6vw;
+  font-size: 7vw;
   color: white;
   font-weight: 700;
   line-height:90%;
+/*  color: #00BFFF;*/
   position: relative;
-  padding-top: 7%;
+  padding-top: 15%;
   padding-left: 5%;
   padding-right: 5%;
-
 /*  top: -100%;*/
 /*  z-index: 10;*/
-
 }
 
 .container{
@@ -99,7 +132,7 @@ body{
 /*platform: section2*/
 .platformSection
 {
-  margin-bottom: 50px;  
+margin: 50px 0 50px 0;
 }
 .platformHeader{
   position: center;
@@ -108,16 +141,14 @@ body{
   padding-bottom: 100px;*/
   letter-spacing: 8px;
   text-align: center;
+  color: #00BFFF;
 }
 
 .platformimage{
   margin-top: 13%;
-  height:150px;
+  height: 150px;
   width:auto;
 }
-/*.platformimage1{
-
-}*/
 
 h1{
   font-weight: 700;
@@ -126,7 +157,6 @@ h1{
 
 .platformText{
   text-align: center;
-  height: 350px;
   padding-top: auto;
 }
 
@@ -138,25 +168,35 @@ h1{
 /*end of platform: section2*/
 
 .ImageBackgroundSection{
-  background-image: image-url('redlight.jpg');  
-  background-repeat: no-repeat;
-  background-position: fixed;
+  background: url(redlight.jpg);  
+ /* position: fixed;*/
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   /*position: relative;*/
   max-width: 100%;
-  height: 500px;
+  height: 55vw;
+  color: #00BFFF;
   top: 0;
   left: 0;
 }
+
+
 .ImageBackgroundSection h2{
   color:white;
   padding-top: 23%;
   line-height: 45px;
+  font-size: 4vw;
 }
 
+/*video#bgvid {
+position: fixed; right: 0; bottom: 0;
+min-width: 100%; min-height: 100%;
+width: auto; height: auto; z-index: -100;
+/*background: url(../assets/images/taxi.jpg) no-repeat;*/
+/*background-size: cover;
+}*/
 
 /*Questions Section*/
 
@@ -164,14 +204,33 @@ h1{
   margin: 80px auto;
 }
 
+.questionSection h1{
+  font-size: 3vw;
+  color: #00BFFF;
+}
+
 .questionBlock{
   text-align: center;
   height:5vm;
+  cursor: pointer;
 }
 
 .answer{
   display:none;
 }
+/*
+.questionsection:hover .answer{
+  display:block;
+}
+
+.question2parent:hover .answer2{
+  display: block;
+  background-color: yellow;
+}
+.question3parent:hover .answer3{
+  display: block;
+  background-color: yellow;
+}*/
 
 .footertext{
 padding: 0;
@@ -184,3 +243,74 @@ margin: 0 auto;
 width: 100%;
 font-size: 3vw;
 }
+
+/*Listings Page css*/
+.expressbook{
+  padding-top: 1%;
+  background-color: #708090;
+  color: white;
+  margin: none;
+  word-spacing: 1px;
+}
+
+.expressbook:hover{
+  background-color: black;
+}
+
+.expressbook p{
+text-align: center;
+}
+
+.listing{
+  padding-top: 120px;
+
+}
+
+/*.driverprofile{
+  border-style: solid;
+  border-width: 1px;
+  color: #00BFFF;
+}
+*/
+/*.driverprofile:hover{
+  background-color: #F5FFFA;
+  border-style: solid;
+  border-width: 1px;
+
+}*/
+
+.driverimage{
+  padding: 5px;
+  display: block;
+  margin:auto;
+}
+
+.driverinfo{
+  text-align: center;
+}
+
+.review{
+  cursor: pointer;
+}
+
+/*.review:hover{
+height:30px;
+}
+*/
+.driverreviews {
+  display: none;
+  padding-top: 2%;
+  color: white;
+}
+
+li{
+  list-style-type: none;
+  text-align: center;
+}
+
+ul{
+  list-style: none;
+  padding: 0;
+}
+
+

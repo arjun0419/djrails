@@ -1,0 +1,26 @@
+<h1 align="center">Drivers </h1>
+
+<p align="center"><%= link_to 'Add New Driver', new_driver_path %></p>
+
+<table width="100%" border="1" >
+  <tr align="center" >
+    <th >First Name</th>
+    <th>Last Name</th>
+    <th>City</th>
+    <th>Phone</th>
+  </tr>
+ 
+  <% @drivers.each do |driver| %>
+    <tr align="center">
+      <td><%= driver.firstName %></td>
+      <td><%= driver.lastName %></td>
+       <td><%= driver.city%></td>
+        <td><%= driver.phone %></td>
+        <% driver.languages.each do |language| %>
+          <td><%= language.name%></td>
+          <%end%>
+
+      <td><%= link_to "edit", [:edit, driver] %></td>
+    </tr>
+  <% end %>
+</table>
