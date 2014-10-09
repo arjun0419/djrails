@@ -37,6 +37,7 @@ gem 'simple_form'
 gem 'mail_form'
 gem 'better_errors', group: :development
 gem 'devise'
+gem 'rails_admin'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
