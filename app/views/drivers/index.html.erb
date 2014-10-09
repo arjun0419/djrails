@@ -1,21 +1,10 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>DriverGuru.Co</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-     
-     <link href="css/bootstrap.min.css" rel="stylesheet" media="screen"/> 
-     <link rel="stylesheet" href="css/animate.min.css">
-     <link href="css/style.css" type ="text/css" rel="stylesheet"/>
-     <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>
 
-  </head>
-  <body>
 <div class="container-fluid">
 <!-- top Nav bar -->
  	<div class = "navbar navbar-inverse navbar-fixed-top topnavbar">
 		<div class = "navbar.header ">
-				<a href = "index.html" class = "navbar-brand logotext">DriverJi</a>
+				<!-- <a href = "index.html" class = "navbar-brand logotext">DriverJi</a> -->
+				<%= link_to 'DriverJI', root_path, :class => "navbar-brand logotext" %>
 				<button class = "navbar-toggle" data-toggle = "collapse" data-target = ".navHeaderCollapse"> 
 					<span class = "icon-bar"></span>
 					<span class = "icon-bar"></span>
@@ -23,7 +12,8 @@
 				</button>
 				<div class = "collapse navbar-collapse navHeaderCollapse">
 					<ul class = "nav navbar-nav navbar-right navbar-header">
-						<li ><a href = "index.html">Home</a></li>
+						<li ><%= link_to 'Home', root_path, :class => "navbar-brand logotext" %></li>
+
 						<!-- <li class = "dropdown">
 							<a href = "#" class = "dropdown-toggle" data-toggle = "dropdown"> Learn More <b class = "caret"></b></a>
 							<ul class = "dropdown-menu">
@@ -465,7 +455,6 @@
 
 <!-- Load JQuery & bootstrap.js -->
     <script src="http://code.jquery.com/jquery.js"></script>
-    <script src="js/bootstrap.min.js"></script>
    <script>
 
    	// $(".questionBlock").on('hover', function(){
