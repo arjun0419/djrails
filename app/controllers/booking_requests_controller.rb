@@ -5,15 +5,21 @@ class BookingRequestsController < ApplicationController
   end
 
   def create
-    @bookingrequest = BookingRequest.new(params[:contact])
-    @bookingrequest.request = request
-   if @bookingrequest.deliver
-      flash.now[:error] = nil
-      flash.now[:notice] = 'Thank you for your booking request!'
-   else
-      flash.now[:error] = 'Cannot send message. Please try again!'
-      render :new
-   end
+    @bookingrequest = BookingRequest.new(booking_request_params)
+    if @bookingrequest.save
+      render plain: "jk"
+    else 
+      flash[:error]=@bookingrequest.errors.messages
+      redirect_to new_booking_request_path
+    end
   end
 
+
+
+
+	private
+
+	def booking_request_params
+		params.require(:booking_request).permit(:first_name, :last_name, :email, :phone, :pikup_date, :pickup_location, :drop_date, :drop_location, :passengers)
+	end
 end

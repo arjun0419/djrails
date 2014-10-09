@@ -1,0 +1,26 @@
+<div class="col-md-12 navbar-default">
+
+	<h3> Great! Please fill in the following form and we will get started on your booking request</h3>
+</div>
+<div class="container">
+<%= simple_form_for(@bookingrequest, html: {:class => 'form-horizontal'}) do |form| %>
+<br>
+<h3> Your Contact Information</h3>
+		<%= form.input :first_name, label:false, input_html: {:class => "form-control", placeholder:"What's your First Name?"}%>
+		<%= form.input :last_name, label:false, input_html: {:class => "form-control", placeholder:"What's your Last Name"}%>
+		<%= form.input :email, label:false, input_html: {:class => "form-control", placeholder:"What's your email ID?"}%>
+		<%= form.input :phone, label:false, input_html: {:class => "form-control", placeholder:"What's your phone number? (Optional)"}%>
+		<br>
+		<h3> Pick-Up Information <h3>
+		<%= form.input :pickup_date, label:false, input_html: {:class => "form-control", placeholder:"Tell us the Date when you need the car"}%>
+		<%= form.input :pickup_location, label:false, input_html: {:class => "form-control", placeholder:"Where can we pick you up from?"}%>
+
+		<h3> Drop-Off Information <h3>
+		<%= form.input :drop_date, label:false, input_html: {:class => "form-control"}%>
+		<%= form.input :drop_location, label:false, input_html: {:class => "form-control", placeholder:"Where would you like us to take you?"}%>
+<br>
+		<%= form.input :passengers, label:false, input_html: {:class => "form-control", placeholder:"Please enter the number of passengers"}%>
+		<br>
+		<%= form.button :submit, 'Submit Booking Request', :class=> "btn btn-primary" %>
+<% end %>
+</div>

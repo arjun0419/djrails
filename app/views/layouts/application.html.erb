@@ -17,34 +17,43 @@
 
 </head>
 <body>
-	<div class = "container-fluid">
-	 	<div class = "navbar navbar-inverse navbar-fixed-top topnavbar">
-			<div class = "navbar.header ">
-					<a href = "#" class = "navbar-brand logotext">DRIVERGURU.CO</a>
-					<button class = "navbar-toggle" data-toggle = "collapse" data-target = ".navHeaderCollapse"> 
-						<span class = "icon-bar"></span>
-						<span class = "icon-bar"></span>
-						<span class = "icon-bar"></span>
-					</button>
-					<div class = "collapse navbar-collapse navHeaderCollapse">
-						<ul class = "nav navbar-nav navbar-right navbar-header">
-							<li ><a href = "#">Home</a></li>
-							<li class = "dropdown">
-								<a href = "#" class = "dropdown-toggle" data-toggle = "dropdown"> Learn More <b class = "caret"></b></a>
-								<ul class = "dropdown-menu">
-									<li><a href = "#">What we offer?</a></li>
-									<li><a href = "#">How does it work?</a></li>
-								</ul>
-							<li><a href = "#">Contact Us</a></li>
-							<!-- <li><a href = "#" >Find a Driver!</a></li> -->
-						</ul>	
-					</div>
-			</div>
+	 	<a name="home"></a> 
+<div class="container-fluid">
+<!-- top Nav bar -->
+ 	<div class = "navbar navbar-inverse navbar-fixed-top topnavbar">
+		<div class = "navbar.header ">
+				<a href = "#home" class = "navbar-brand logotext">DriverJi</a>
+				<button class = "navbar-toggle" data-toggle = "collapse" data-target = ".navHeaderCollapse"> 
+					<span class = "icon-bar"></span>
+					<span class = "icon-bar"></span>
+					<span class = "icon-bar"></span>
+				</button>
+				<div class = "collapse navbar-collapse navHeaderCollapse">
+					<ul class = "nav navbar-nav navbar-right navbar-header">
+						<li ><a href = "#">Home</a></li>
+						<!-- <li class = "dropdown">
+							<a href = "#" class = "dropdown-toggle" data-toggle = "dropdown"> Learn More <b class = "caret"></b></a>
+							<ul class = "dropdown-menu"> -->
+								<li><a href = "#platformSection">Our Platform</a></li>
+								<li><a href = "#questionSection">Questions?</a></li>
+							<!-- </ul> -->
+						<li><a href = "#">Contact Us</a></li>
+
+						<!-- <li><a href = "#" >Find a Driver!</a></li> -->
+					</ul>	
+				</div>
 		</div>
 	</div>
+</div>
 
-
-
+	<% if flash[:error] %>
+	<div class ="flash">
+  		<%flash[:error].each do |x,y| %>
+   	<p><%= x%> : <%= y.join(',') %></p>
+  	<%end%>
+	</div>
+	
+<%end%>
 	<%= yield %>
 	</div>
 </body>
