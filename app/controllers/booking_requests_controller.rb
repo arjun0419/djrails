@@ -19,6 +19,6 @@ class BookingRequestsController < ApplicationController
 	private
 
 	def booking_request_params
-		params.require(:booking_request).permit(:first_name, :last_name, :email, :pickup_date, :pickup_location, :drop_date, :drop_location, :passengers)
+		params.require(:booking_request).permit(:first_name, :phone, :last_name, :email, :pickup_date, :pickup_location, :drop_date, :drop_location, :passengers)
 	end
 end
